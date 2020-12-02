@@ -27,6 +27,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -48,7 +51,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Program Files/nodejs/node.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -62,7 +65,7 @@
       <recent name="C:\Github\sedecti\templates" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.valida.php">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -74,11 +77,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="valida.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sedecti/CPF/PHP/valida.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="valida.js" type="NodeJSConfigurationType" temporary="true" path-to-node="$PROJECT_DIR$/../../Program Files/nodejs/node" nameIsGenerated="true" path-to-js-file="valida.js" working-dir="$PROJECT_DIR$/CPF/JavaScript">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.valida.php" />
         <item itemvalue="Node.js.valida.js" />
       </list>
     </recent_temporary>
@@ -97,7 +104,9 @@
       <workItem from="1606912008583" duration="13847000" />
       <workItem from="1606931376306" duration="381000" />
       <workItem from="1606933129430" duration="1174000" />
-      <workItem from="1606941033519" duration="4514000" />
+      <workItem from="1606941033519" duration="4608000" />
+      <workItem from="1606945738795" duration="520000" />
+      <workItem from="1606946490732" duration="2501000" />
     </task>
     <servers />
   </component>
@@ -117,6 +126,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="390" y="7" key="#PHP" timestamp="1606947081550">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="7" key="#PHP/0.0.1366.728@0.0.1366.728" timestamp="1606947081550" />
     <state x="274" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606942471423">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -125,21 +138,29 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606942091049" />
-    <state width="661" height="179" key="GridCell.Tab.0.bottom" timestamp="1606945578869">
+    <state width="661" height="179" key="GridCell.Tab.0.bottom" timestamp="1606945697718">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606945578869" />
-    <state width="661" height="179" key="GridCell.Tab.0.center" timestamp="1606945578869">
+    <state width="661" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606945697718" />
+    <state width="661" height="179" key="GridCell.Tab.0.center" timestamp="1606945697718">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606945578869" />
-    <state width="661" height="179" key="GridCell.Tab.0.left" timestamp="1606945578869">
+    <state width="661" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606945697718" />
+    <state width="661" height="179" key="GridCell.Tab.0.left" timestamp="1606945697718">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606945578869" />
-    <state width="661" height="179" key="GridCell.Tab.0.right" timestamp="1606945578869">
+    <state width="661" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606945697718" />
+    <state width="661" height="179" key="GridCell.Tab.0.right" timestamp="1606945697718">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="661" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606945578869" />
+    <state width="661" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606945697718" />
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1606945937780">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1606945937780" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606948142721">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606948142721" />
   </component>
 </project>
