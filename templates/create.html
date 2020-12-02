@@ -10,7 +10,7 @@
 <body>
 
     {% if mensagem %}
-    <div class="alert alert-primary" role="alert">
+    <div class="alert alert-secondary" role="alert">
         <strong>{{mensagem}}</strong>
     </div>
     {% endif %}
@@ -27,7 +27,7 @@
             <a href="{{ url_for('form_busca_update') }}"><button type="submit" class="btn btn-primary">Update</button></a>
         </div>
         <div class="col">
-            <button type="submit" class="btn btn-primary">Delete</button>
+            <a href="{{ url_for('form_busca_delete') }}"><button type="submit" class="btn btn-primary">Delete</button></a>
         </div>
     </div>
 
@@ -39,7 +39,7 @@
 
         <div class="form-group col-sm-2">
             <label for="cpf">CPF</label>
-            <input type="text" class="form-control form-control-sm" id="cpf" name="cpf" value="{{ cpf }}"required>
+            <input type="text" class="form-control form-control-sm" id="cpf" name="cpf" value="{{ cpf }}" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite no formato 000.000.000-00" required>
 
             {% if cpf_invalido %}
             <div class="alert alert-danger" role="alert">
@@ -92,7 +92,7 @@
 
             <div class="form-group col-sm-2">
                 <label for="numero">Número</label>
-                <input type="number" class="form-control form-control-sm" id="numero" name="numero" value="{{ numero }}}" required>
+                <input type="number" min="1" class="form-control form-control-sm" id="numero" name="numero" value="{{ numero }}}" required>
             </div>
 
             <div class="form-group col-sm-5">
