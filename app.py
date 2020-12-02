@@ -118,7 +118,7 @@ def create():
     }
 
     endereco = {
-        'id_usuario': None,
+        'id_usuario': request.args.get('cpf'),
         'cep': request.args.get('cep'),
         'logradouro': request.args.get('logradouro'),
         'numero': request.args.get('numero'),
@@ -134,11 +134,53 @@ def create():
     if not id_usuario:
         tabela_usuario.insert_one(usuario)
         id_usuario = tabela_usuario.find_one(usuario)
-
-        endereco['id_usuario'] = id_usuario['_id']
         tabela_endereco.insert_one(endereco)
 
-    return render_template('index.html', mensagem='Operação realizada!')
+    return render_template('create.html', mensagem='Registro inserido no banco de dados!')
+
+
+@app.route('/form_read', methods=['GET', 'POST'])
+def form_read():
+    if request.method == 'POST':
+        cpf = request.form['cpf']
+        cpf_validado = valida_digitos_cpf(cpf)
+
+        if not cpf_validado:
+            return render_template('read.html', cpf_invalido=True, cpf=cpf)
+        else:
+            return redirect(url_for('read', cpf=cpf))
+
+    return render_template('read.html')
+
+@app.route('/read', methods=['GET', 'POST'])
+def read():
+    cpf = request.args.get('cpf')
+
+    # conectando as tabelas do banco de dados
+    tabela_usuario, tabela_endereco = conecta_banco()
+
+    usuario = tabela_usuario.find_one({'cpf':cpf})
+
+    if not usuario:
+        return 'NOT FOUND CPF!'
+    else:
+        endereco = tabela_endereco.find_one({'id_usuario':cpf})
+        return render_template('read.html', usuario=usuario, endereco=endereco)
+
+@app.route('/form_update', methods=['GET', 'POST'])
+def form_update():
+    if request.method == 'POST':
+        cpf = request.form['cpf']
+        cpf_validado = valida_digitos_cpf(cpf)
+
+        if not cpf_validado:
+            return render_template('update.html', cpf_invalido=True, cpf=cpf)
+        else:
+            return redirect(url_for('update', cpf=cpf))
+
+    return render_template('update.html')
+
+@app.route('/update', methods=['GET', 'POST'])
 
 if __name__ == '__main__':
     app.run(debug=True)
