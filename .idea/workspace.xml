@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d65c8ef6-581d-42b7-8560-3ad7cb9779b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CPF/cpf_java.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +31,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -48,7 +48,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Program Files/nodejs/node.exe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -74,6 +74,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="valida.js" type="NodeJSConfigurationType" temporary="true" path-to-node="$PROJECT_DIR$/../../Program Files/nodejs/node" nameIsGenerated="true" path-to-js-file="valida.js" working-dir="$PROJECT_DIR$/CPF/JavaScript">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.valida.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -89,6 +97,7 @@
       <workItem from="1606912008583" duration="13847000" />
       <workItem from="1606931376306" duration="381000" />
       <workItem from="1606933129430" duration="1174000" />
+      <workItem from="1606941033519" duration="4514000" />
     </task>
     <servers />
   </component>
@@ -106,5 +115,31 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="274" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606942471423">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="274" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1606942471423" />
+    <state x="462" y="119" key="FileChooserDialogImpl" timestamp="1606942091049">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="462" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606942091049" />
+    <state width="661" height="179" key="GridCell.Tab.0.bottom" timestamp="1606945578869">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606945578869" />
+    <state width="661" height="179" key="GridCell.Tab.0.center" timestamp="1606945578869">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606945578869" />
+    <state width="661" height="179" key="GridCell.Tab.0.left" timestamp="1606945578869">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606945578869" />
+    <state width="661" height="179" key="GridCell.Tab.0.right" timestamp="1606945578869">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606945578869" />
   </component>
 </project>
