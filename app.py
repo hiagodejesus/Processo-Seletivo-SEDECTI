@@ -162,13 +162,13 @@ def read():
     usuario = tabela_usuario.find_one({'cpf':cpf})
 
     if not usuario:
-        return 'NOT FOUND CPF!'
+        return render_template('read.html', mensagem=True)
     else:
         endereco = tabela_endereco.find_one({'id_usuario':cpf})
         return render_template('read.html', usuario=usuario, endereco=endereco)
 
-@app.route('/form_update', methods=['GET', 'POST'])
-def form_update():
+@app.route('/form_busca_update', methods=['GET', 'POST'])
+def form_busca_update():
     if request.method == 'POST':
         cpf = request.form['cpf']
         cpf_validado = valida_digitos_cpf(cpf)
@@ -176,11 +176,90 @@ def form_update():
         if not cpf_validado:
             return render_template('update.html', cpf_invalido=True, cpf=cpf)
         else:
-            return redirect(url_for('update', cpf=cpf))
+            return redirect(url_for('form_update', cpf=cpf))
 
     return render_template('update.html')
 
+@app.route('/form_update', methods=['GET', 'POST'])
+def form_update():
+    cpf = request.args.get('cpf')
+
+    # conectando as tabelas do banco de dados
+    tabela_usuario, tabela_endereco = conecta_banco()
+
+    usuario = tabela_usuario.find_one({'cpf':cpf})
+
+    if not usuario:
+        return render_template('update.html', mensagem='Registro não encontrado no banco de dados!')
+    else:
+        nome = usuario['nome']
+        id =  cpf = usuario['cpf']
+        idade = usuario['idade']
+        sexo = usuario['sexo']
+
+        endereco = tabela_endereco.find_one({'id_usuario':cpf})
+
+        cep = endereco['cep']
+        logradouro = endereco['logradouro']
+        numero = endereco['numero']
+        bairro = endereco['bairro']
+        cidade = endereco['cidade']
+        estado = endereco['estado']
+
+        return render_template('update.html', usuario=True, id=id, nome=nome, cpf=cpf, idade=idade, sexo=sexo, cep=cep, logradouro=logradouro, numero=numero, bairro=bairro, cidade=cidade, estado=estado)
+
 @app.route('/update', methods=['GET', 'POST'])
+def update():
+    if request.method == 'POST':
+        id = request.form['id']
+        nome = limpa_string(request.form['nome'])
+        cpf = request.form['cpf']
+        idade = request.form['idade']
+        sexo = request.form['sexo']
+
+        cep = request.form['cep']
+
+        print('update ', cep)
+        endereco = busca_endereco(cep)
+        logradouro = endereco['logradouro']
+        numero = request.form['numero']
+        bairro = endereco['bairro']
+        cidade = endereco['localidade']
+        estado = endereco['uf']
+
+        print('logradouro ', logradouro)
+
+        if not valida_digitos_cpf(cpf):
+            return render_template('update.html', usuario=True, cpf_invalido=True, nome=nome, cpf=cpf, idade=idade, sexo=sexo, cep=cep, logradouro=logradouro, numero=numero, bairro=bairro, cidade=cidade, estado=estado)
+        else:
+            # conectando as tabelas do banco de dados
+            tabela_usuario, tabela_endereco = conecta_banco()
+
+            usuario = tabela_usuario.find_one({'cpf':id})
+            endereco = tabela_endereco.find_one({'cpf':id})
+
+            tabela_usuario.update_one(usuario, {"$set": {
+                    'nome': nome,
+                    'cpf': cpf,
+                    'idade': idade,
+                    'sexo': sexo
+                  }
+               }
+            )
+
+            x = tabela_endereco.update_one({'id_usuario':usuario['cpf']}, {"$set": {
+                        'cep': cep,
+                        'logradouro': logradouro,
+                        'numero': numero,
+                        'bairro': bairro,
+                        'cidade': cidade,
+                        'estado': estado
+                    }
+                }
+            )
+
+            print('x ', x)
+            return render_template('update.html', mensagem='Registro atualizado no banco de dados!')
 
 if __name__ == '__main__':
     app.run(debug=True)
