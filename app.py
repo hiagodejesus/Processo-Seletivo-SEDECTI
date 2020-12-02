@@ -282,7 +282,6 @@ def update():
         # capturando as informações a serem atualizadas
         id = cpf = request.form['id']
         nome = limpa_string(request.form['nome'])
-        #cpf = request.form['cpf']
         idade = request.form['idade']
         sexo = request.form['sexo']
 
