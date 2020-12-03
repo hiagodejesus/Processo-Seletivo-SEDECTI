@@ -1,0 +1,7 @@
+Flask
+pymongo
+pymongo[gssapi]
+pymongo[aws]
+pymongo[srv]
+pymongo[tls]
+requests
