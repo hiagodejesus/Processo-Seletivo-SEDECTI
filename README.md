@@ -6,6 +6,7 @@
 
 - Flask
 - MongoDB Cloud (limite de 100 requisições)
+- Bootstrap
 - WebStorm
 - PhpStorm
 - IntelliJ IDEA
