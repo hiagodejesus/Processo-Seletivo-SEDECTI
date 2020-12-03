@@ -213,7 +213,7 @@ def read():
 
     # se não existem informações para o CPF, retorna uma mensagem (O CPF não foi cadastrado!)
     if not usuario and not endereco:
-        return render_template('read.html', mensagem=True)
+        return render_template('read.html', mensagem='O CPF não foi cadastrado!')
 
     #caso contrário, retorna as informações encontradas no banco de dados para o CPF informado
     else:
